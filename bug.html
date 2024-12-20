@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Incorrect way to add a new div element
+    var newDiv = document.createElement('<div>'); //Wrong: Creates a text node, not an element
+    newDiv.innerHTML = "<p>This is new text.</p>";
+    document.body.appendChild(newDiv);
+  </script>
+</body>
+</html>
